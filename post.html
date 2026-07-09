@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <a href="index.html" class="navbar-brand">Ragul's Blog</a>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link active">Blog</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        <nav class="top-nav">
+            <a href="index.html" class="back-link">← Back to Posts</a>
+        </nav>
+        
+        <main>
+            <article id="post-content" class="post-container">
+                <div class="loader">Loading post...</div>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> My Personal Blog.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

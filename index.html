@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <meta name="description" content="A personal blog containing my thoughts and tutorials.">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <a href="index.html" class="navbar-brand">Ragul's Blog</a>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link active">Blog</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Abstract Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        <header class="hero-profile">
+            <div class="hero-avatar">R</div>
+            <h1 class="glow-text">Ragul</h1>
+            <p class="subtitle">Software Engineer & Creator</p>
+            <div class="controls-container">
+                <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts">
+                <select id="sort-select" aria-label="Sort posts">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+        </header>
+        
+        <main>
+            <div id="posts-container" class="posts-grid">
+                <!-- Posts will be injected here by script.js -->
+                <div class="loader">Loading posts...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> My Personal Blog. Built with ❤️ and Vanilla Web Tech.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

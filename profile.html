@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - My Personal Blog</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <a href="index.html" class="navbar-brand">Ragul's Blog</a>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link">Blog</a>
+            <a href="profile.html" class="nav-link active">Profile</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Abstract Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        
+        <main class="profile-main">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <!-- Placeholder AI Image/Gradient -->
+                        <div class="avatar-placeholder">R</div>
+                    </div>
+                    <div class="profile-title">
+                        <h1 class="glow-text">Ragul</h1>
+                        <p class="subtitle">Software Engineer & Creator</p>
+                    </div>
+                </div>
+                
+                <div class="profile-bio">
+                    <p>Hello! I'm a passionate developer who loves exploring the intersections of code, design, and life. I build tools and web experiences that aim to wow the user. When I'm not coding, you can find me writing about tech or tweaking my personal blog.</p>
+                </div>
+                
+                <div class="profile-section">
+                    <h3>Technologies & Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">React & Next.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> My Personal Blog. Built with ❤️ and Vanilla Web Tech.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Editor - My Personal Blog</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- EasyMDE -->
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <a href="index.html" class="navbar-brand">Ragul's Blog</a>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link">Blog</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="editor.html" class="nav-link active" style="opacity: 0.5; font-size: 0.8rem;">Editor</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Abstract Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        <header class="editor-header" style="text-align: center; margin-bottom: 3rem;">
+            <h1 class="glow-text">Create Post</h1>
+            <p class="subtitle">Write your markdown and generate the JSON snippet.</p>
+        </header>
+
+        <main class="editor-main">
+            <div class="editor-card">
+                <div class="form-group">
+                    <label for="post-title">Title</label>
+                    <input type="text" id="post-title" class="form-control" placeholder="e.g., My Awesome New Post">
+                </div>
+                
+                <div class="form-group">
+                    <label for="post-summary">Summary</label>
+                    <input type="text" id="post-summary" class="form-control" placeholder="A brief description...">
+                </div>
+
+                <div class="form-group">
+                    <label for="post-date">Date</label>
+                    <input type="date" id="post-date" class="form-control">
+                </div>
+
+                <div class="form-group" style="margin-top: 2rem;">
+                    <label for="md-editor">Content (Markdown)</label>
+                    <div class="mde-container">
+                        <textarea id="md-editor"></textarea>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">Generate JSON</button>
+
+                <div id="output-section" class="output-section" style="display: none; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--card-border);">
+                    <h3>Generated JSON</h3>
+                    <p class="help-text" style="color: var(--text-muted); margin-bottom: 1rem;">Copy this snippet and paste it into the array in <code>posts.json</code>.</p>
+                    <div class="code-container" style="position: relative;">
+                        <button id="copy-btn" class="copy-btn">Copy</button>
+                        <pre style="margin-bottom: 0;"><code id="json-output"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> My Personal Blog. Built with ❤️ and Vanilla Web Tech.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+    <script src="script.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

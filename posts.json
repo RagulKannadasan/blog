@@ -1,0 +1,23 @@
+[
+  {
+    "id": "welcome",
+    "title": "Welcome to my new blog!",
+    "date": "2026-07-09",
+    "summary": "This is my very first blog post on the new static site.",
+    "content": "# Welcome to my Blog!\n\nI'm so excited to share my thoughts here. This blog is built using **HTML, CSS, and JS**, and hosted on *GitHub Pages*.\n\n## Why this stack?\n- Blazing fast ⚡\n- Zero backend to maintain\n- Write posts in Markdown\n\nStay tuned for more updates!"
+  },
+  {
+    "id": "learning-web-dev",
+    "title": "My journey into Web Development",
+    "date": "2026-07-10",
+    "summary": "A short reflection on learning modern web technologies.",
+    "content": "# The Journey Begins\n\nLearning web development has been a fantastic experience. From understanding the core structure of HTML to styling with CSS and adding interactivity with JavaScript.\n\n### Favorite Tools\n1. VS Code\n2. Git & GitHub\n3. Chrome DevTools\n\nHere is a simple code snippet I love:\n\n```javascript\nconsole.log('Hello, World!');\n```"
+  },
+  {
+    "id": "new",
+    "title": "new",
+    "date": "2026-07-09",
+    "summary": "some",
+    "content": "[local-voice](https://local-voice-codelab.vercel.app)"
+  }
+]
