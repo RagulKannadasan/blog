@@ -139,9 +139,14 @@ function renderPosts(postsToRender) {
             day: 'numeric' 
         });
 
+        let badgeHtml = '';
+        if (post.isExternal) {
+            badgeHtml = '<span style="font-size: 0.7rem; padding: 0.2rem 0.5rem; background: #3b49df; color: #fff; border-radius: 4px; margin-left: 0.5rem; vertical-align: middle;">dev.to</span>';
+        }
+
         card.innerHTML = `
             <span class="post-date">${formattedDate}</span>
-            <h2>${post.title}</h2>
+            <h2>${post.title}${badgeHtml}</h2>
             <p>${post.summary}</p>
         `;
         
@@ -184,7 +189,16 @@ async function loadSinglePost() {
     });
 
     // Parse markdown (assuming marked.js is loaded in HTML)
-    const htmlContent = marked.parse(post.content);
+    const htmlContent = marked.parse(post.content || '');
+
+    let externalNote = '';
+    if (post.externalUrl) {
+        externalNote = `
+            <div style="margin-top: 3rem; padding: 1rem; background: var(--card-bg, #f4f4f5); border-radius: 8px; border-left: 4px solid #3b49df;">
+                <p style="margin: 0;">This article was originally published on <a href="${post.externalUrl}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">dev.to</a>.</p>
+            </div>
+        `;
+    }
 
     container.innerHTML = `
         <div class="post-header">
@@ -194,5 +208,6 @@ async function loadSinglePost() {
         <div class="markdown-body">
             ${htmlContent}
         </div>
+        ${externalNote}
     `;
 }
