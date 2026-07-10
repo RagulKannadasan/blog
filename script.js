@@ -52,7 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchPosts() {
     try {
-        const response = await fetch('https://blog-ragulkannadasan.vercel.app/api/posts');
+        const isLocal = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+        const apiUrl = isLocal 
+            ? 'http://localhost:3000/api/posts' 
+            : 'https://blog-ragulkannadasan.vercel.app/api/posts';
+            
+        const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
