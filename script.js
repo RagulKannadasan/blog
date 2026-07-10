@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchPosts() {
     try {
-        const response = await fetch('posts.json');
+        const response = await fetch('https://blog-ragulkannadasan.vercel.app/api/posts');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
